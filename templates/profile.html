@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block nav %} 
+
+    <div class="dropdown">
+        <div id="profile">
+            <img src="../static/img/person-fill.svg" alt="profile">
+        </div>
+        <div class="dropdown-content">
+            <a href="/">Messages</a>
+            <a href="/login">Logout</a>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block main %}
+
+    <main>
+        <div class="profile-container">
+            <div class="inner-profile-container">
+                <p>Welcome, {{ name }}!</p>
+                <button id="get-link-button">Get Link</button>
+            </div>
+        </div>
+        
+        <p id="unique-link">{{ unique_link }}</p>
+    </main>
+
+
+{% endblock %}

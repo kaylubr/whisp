@@ -1,0 +1,299 @@
+/* Layout */
+
+*, *:before, *:after { 
+    box-sizing: border-box; 
+  }
+
+:root {
+    --primary-color: #222831;
+    --primary-light: #eee;
+    --primary-component-color: #76ABAE;
+    --secondary-color: #757575;
+    --outer-radius: 12px;
+    --inner-radius: 8px;
+    --container-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em;
+}
+
+body {
+    min-height: 100vh;
+    padding: 0px;
+    margin: 0px;
+    background-color: var(--primary-color);
+    color: var(--primary-light);
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5rem;
+    height: 85px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 83vh;
+}
+
+button {
+    background-color: #76ABAE;
+    color: #eee;
+    border: 0px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #557476;
+}
+
+.log-reg-form > label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-light);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+#title {
+    font-size: 3rem;
+}
+
+.kalnia-title {
+    font-family: "Kalnia", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+    font-size: 1.3rem;
+}
+
+footer a {
+    color: var(--primary-light);
+}
+
+footer a:hover {
+    color: var(--secondary-color);
+}
+
+/* Register */
+
+#register-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 395px;
+    padding: 1.5rem;
+    border-radius: var(--outer-radius);
+    box-shadow: var(--container-shadow)
+}
+
+main .log-reg-form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 1.5rem;
+}
+
+input, button {
+    font-family: 'Roboto', sans-serif;
+    height: 40px;
+    border-radius: 0.2rem;
+    border: 0.3rem solid transparent;
+    transition: all 0.3s;
+}
+
+input {
+    padding: 12px;
+}
+
+/* Login */
+
+#login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em;
+    padding: 1.2rem;
+    border-radius: var(--outer-radius);
+}
+
+#login-container a {
+    text-decoration: underline;
+}
+
+/* Index */
+
+.grid-container {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 400px);
+    justify-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: 83vh;
+}
+
+.messages-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em;
+    padding: 1rem;
+    border-radius: var(--outer-radius);
+}
+
+.inner-messages-container {
+    padding: 1rem;
+    color: black;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: var(--primary-light);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: var(--inner-radius);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: var(--inner-radius);
+}
+
+.dropdown-content a:hover {
+    background-color: var(--secondary-color);
+}
+
+#profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-light);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#profile:hover {
+    background-color: #eeeeeec5;
+}
+
+#profile > img {
+    width: 70%;
+}
+
+/* Profile */
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 380px;
+    height: 200px;
+    box-shadow: var(--container-shadow);
+    border-radius: var(--outer-radius);
+}
+
+.inner-profile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 345px;
+    height: 170px;
+    background-color: var(--primary-light);
+    border-radius: var(--inner-radius);
+}
+
+.inner-profile-container > p {
+    color: black;
+    font-size: 1.5rem;
+}
+
+/* Messsage */
+
+.message-container, 
+#message-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.message-container {
+    box-shadow: var(--container-shadow);
+    border-radius: var(--outer-radius);
+    width: 600px;
+    height: 380px;
+}
+
+#message-form {
+    gap: 1.8rem;
+}
+
+.message-container p {
+    margin: 0px;
+    font-size: 1.4rem;
+}
+
+.message-container textarea {
+    border-radius: var(--inner-radius);
+    padding: 1rem;
+    font-size: 1.3rem;
+    width: 520px;
+    height: 190px;
+    resize: none;
+}
+
+.message-container button {
+    width: 6rem;
+}
+
+
+#unique-link {
+    display: none;
+}

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <main>
+        <div class="message-container">
+            <form action="/message/{{ id }}" method="post" id="message-form">
+                <p>Send an anonymous message!</p>
+                <textarea name="message" id="message" autofocus maxlength="252"></textarea>
+                <button>Send</button>
+            </form>
+        </div>
+    </main>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block nav %} 
+
+    <a href="/register">Register</a>
+
+{% endblock %}
+
+{% block main %}
+
+    <main>
+        <div id="login-container">
+            <form action="/login" method="post" class="log-reg-form">
+                <label for="username">
+                    Username
+                    <input type="text" name="username" id="username">
+                </label> 
+                <label for="password">
+                    Password
+                    <input type="password" name="password" id="password">
+                </label>
+                <button>Login</button>
+            </form>
+        </div>
+    </main>
+
+{% endblock %}

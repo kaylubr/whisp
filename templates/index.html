@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block nav %} 
+
+    <div class="dropdown">
+        <div id="profile">
+            <img src="../static/img/person-fill.svg" alt="profile">
+        </div>
+        <div class="dropdown-content">
+            <a href="/user">Profile</a>
+            <a href="/login">Logout</a>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block main %} 
+    
+
+    <div class="grid-container">
+        {% for message in messages %}
+        <div class="messages-container">
+            <div class="inner-messages-container">
+                {{ message }}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+
+{% endblock %}
